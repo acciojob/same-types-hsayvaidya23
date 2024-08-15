@@ -4,6 +4,9 @@ function isSameType(value1, value2) {
     return true;
   }
 
+  if (Number.isNaN(Number(value1)) || Number.isNaN(Number(value2))) {
+    return false;
+  }
   const type1 = typeof (isNaN(Number(value1)) ? value1 : Number(value1));
   const type2 = typeof (isNaN(Number(value2)) ? value2 : Number(value2));
 
